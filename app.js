@@ -86,26 +86,6 @@ app.get('/api/repos/:repositoryId/commits/:commitHash/diff', (req, res) => {
     });
 });
 
-// part 5
-app.get('/api/repos/:repositoryId/blob/:commitHash/:pathToFile', (req, res) => {
-    if (!validRepositoryId(req.params.repositoryId)) {
-        res.status(400).end();
-        return;
-    }
-    let repo_dir = repositoryFullPath(req.params.repositoryId);
-    let commit_hash = req.params.commitHash;
-    let path_to_file = req.params.pathToFile;
-
-    let command = `cd ${repo_dir}  && git show ${commit_hash}:${path_to_file}`;
-    exec(command, (e, stdout, stderr) => {
-        if (e instanceof Error) {
-            res.status(404).end();
-            return;
-        }
-        res.json({'file': stdout.split('\n').filter((line) => line !== '')});
-    });
-});
-
 // part 4
 app.get('/api/repos/:repositoryId', (req, res) => {
     if (!validRepositoryId(req.params.repositoryId)) {
@@ -126,26 +106,25 @@ app.get('/api/repos/:repositoryId', (req, res) => {
     });
 });
 
-// app.get('/api/repos/:repositoryId/tree/:commitHash/:path', (req, res) => {
-//     if (!validRepositoryId(req.params.repositoryId)) {
-//         res.status(400).end();
-//         return;
-//     }
-//     let repo_dir = repositoryFullPath(req.params.repositoryId);
-//     let commit_hash = req.params.commitHash;
-//     let path_to_folder = req.params.path;
-//
-//     let command = `cd ${repo_dir} && git show ${commit_hash}:${path_to_folder}`;
-//     exec(command, (e, stdout, stderr) => {
-//         if (e instanceof Error) {
-//             res.status(404).end();
-//             return;
-//         }
-//         let lines = stdout.split('\n');
-//         let filtered = lines.filter((value, index) => value !== '' && index !== 0);
-//         res.json({'files': filtered});
-//     });
-// });
+// part 5
+app.get('/api/repos/:repositoryId/blob/:commitHash/:pathToFile', (req, res) => {
+    if (!validRepositoryId(req.params.repositoryId)) {
+        res.status(400).end();
+        return;
+    }
+    let repo_dir = repositoryFullPath(req.params.repositoryId);
+    let commit_hash = req.params.commitHash;
+    let path_to_file = req.params.pathToFile;
+
+    let command = `cd ${repo_dir}  && git show ${commit_hash}:${path_to_file}`;
+    exec(command, (e, stdout, stderr) => {
+        if (e instanceof Error) {
+            res.status(404).end();
+            return;
+        }
+        res.json({'file': stdout.split('\n').filter((line) => line !== '')});
+    });
+});
 
 // part 6
 app.delete('/api/repos/:repositoryId', (req, res) => {
