@@ -194,8 +194,8 @@ app.get('/api/repos/:repositoryId/:commitHash/', (req, res) => {
         return;
     }
     let repo_dir = repositoryFullPath(req.params.repositoryId);
-    let skip = req.query.skip;
-    let number = req.query.number;
+    let skip = req.query.skip || 0;
+    let number = req.query.number || 10;
     let commit_hash = req.params.commitHash;
 
     let command = `cd ${repo_dir} && git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --skip=${skip} -n ${number} ${commit_hash}`;
