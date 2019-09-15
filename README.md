@@ -8,7 +8,7 @@
 - [x] GET /api/repos/:repositoryId/blob/:commitHash/:pathToFile
 - [x] DELETE /api/repos/:repositoryId
 - [x] POST /api/repos/:repositoryId + { url: ‘repo-url’ }
-- [x] Бонус: пагинация. См. ниже.
+- [x] Бонус: [пагинация](#api-bonus).
 - [ ] Супер Бонус
 
 ## Запуск сервера
