@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 56px;
+  border-bottom: 1px solid var(--brdr-default);
+  &__content {
+  }
+  &__item {
+    margin-top: 4px;
+  }
+  &__logo {
+    margin-left: 16px;
+    @media only screen and (min-width: 361px) {
+      margin-left: 31px;
+    }
+  }
+  &__menu {
+    margin-left: 40px;
+    border-bottom: 3px solid var(--brdr-red);
+  }
+}

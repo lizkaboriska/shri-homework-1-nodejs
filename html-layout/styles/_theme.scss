@@ -1,0 +1,27 @@
+
+
+.theme {
+  &_color {
+    &_default {
+      --brdr-default: #F0F2F3;
+      --brdr-lighter: #E5E5E5;
+      --brdr-darker: #ccc;
+      --brdr-red: #FF4F49;
+      --brdr-red-detail: #FF3029;
+
+      --txt-grey: #7F8285;
+      --txt-blue: #1774E9;
+      --txt-table-grey: #B8BEC3;
+      --txt-footer: #7F8285;
+      --txt-purple: #6B69C7;
+      --txt-green: #19BC4D;
+
+      --bg-grey: #F5F5F5;
+      --bg-darker-grey: #E6E6E6;
+      //--bg-lighter-grey: #F5F5F5;
+      --bg-lightest-grey: #FAFBFC;
+      --bg-light-green: #E6FFED;
+      --bg-light-red: #FFEEF0;
+    }
+  }
+}

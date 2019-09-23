@@ -1,0 +1,25 @@
+.layout {
+  width: 100%;
+  &__container {
+    &_size {
+    }
+    &_align {
+      &_center {
+        margin: 0 auto;
+      }
+    }
+    &_indent {
+      &-h {
+        &_s {
+          margin-right: 16px;
+          margin-left: 16px;
+
+          @media only screen and (min-width: 361px) {
+            margin-right: 32px;
+            margin-left: 32px;
+          }
+        }
+      }
+    }
+  }
+}

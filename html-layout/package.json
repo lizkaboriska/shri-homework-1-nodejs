@@ -1,0 +1,16 @@
+{
+  "name": "shri-second-hw",
+  "version": "1.0.0",
+  "description": "Second homework for SHRI",
+  "main": "jsons/bemjson_body.js",
+  "dependencies": {
+    "bem-xjst": "^8.9.6",
+    "cssparser": "^0.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
