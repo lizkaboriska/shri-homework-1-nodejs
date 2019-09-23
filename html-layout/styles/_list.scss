@@ -1,0 +1,124 @@
+.list {
+  $breakpoint: 400px;
+  width: 100%;
+  font-size: 15px;
+
+  &__container {
+    padding-top: 10px;
+    padding-bottom: 12px;
+    width: calc(100% - 9px);
+    border-bottom: 1px solid var(--brdr-default);
+    display: inline-block;
+
+    &:last-child {
+      border-bottom: 0px;
+    }
+
+    @media only screen and (min-width: $breakpoint) {
+      display: block;
+      width: 100%;
+      height: 45px;
+      padding-bottom: 0px;
+      padding-top: 0px;
+    }
+  }
+
+
+  &__item {
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+
+    @media only screen and (min-width: $breakpoint) {
+      line-height: 45px;
+      white-space: nowrap;
+    }
+  }
+
+  &__by, &__comma {
+    margin-right: 5px;
+    display: inline-block;
+    @media only screen and (min-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  &__name, &__br-name {
+    display: block;
+    div { display: inline-block}
+  }
+
+  &__author {
+    display: none;
+    @media only screen and (min-width: $breakpoint) {
+      display: inline-block;
+    }
+  }
+
+  &__hash {
+    display: none;
+  }
+
+  &__hash, &__brunch, &__hash-mob, &__full-hash {
+    color: var(--txt-blue);
+  }
+
+  @media only screen and (min-width: $breakpoint) {
+    &__brunch {
+      display: none;
+    }
+    &__name {
+      width: 18%;
+      display: inline-block;
+    }
+    &__br-name {
+     width: 50%;
+      display: inline-block;
+    }
+    &__hash {
+      width: 19%;
+      display: inline-block;
+    }
+    &__full-hash {
+      width: 50%;
+      display: inline-block;
+      div {
+        margin-left: auto;
+        margin-right: 0;
+        width: min-content;
+      }
+    }
+    &__message {
+      width: 35%;
+    }
+    &__author {
+      width: 24%;
+    }
+    &__author-mob {
+      display: none;
+    }
+    &__time {
+      width: 4%;
+      white-space: nowrap;
+    }
+    &__hash-mob {
+      display: none;
+    }
+    &__break {
+        display: none;
+    }
+  }
+
+  &__container_header {
+    display: none;
+
+    @media only screen and (min-width: $breakpoint) {
+      color: var(--txt-table-grey);
+      display: table;
+    }
+  }
+}
+
+.list__container_header .list__hash, .list__container_header .list__full-hash {
+  color: var(--txt-table-grey);
+}

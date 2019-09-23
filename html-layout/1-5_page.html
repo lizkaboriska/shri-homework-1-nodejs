@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SECOND HW</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="theme theme_color_default">
+    <div class="layout">
+      <div class="layout__container layout__container_size_full">
+        <div class="header">
+          <div class="header__item">
+            <div class="header__logo logo"></div>
+          </div>
+          <div class="header__item">
+            <div class="header__menu dd-menu">
+              <div class="text text_line_l text_weight_bold text_size_s">Repository</div>
+              <div class="text text_line_m text_size_s">Arc</div>
+              <div class="header-arrow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layout__container layout__container_indent-h_s">
+        <div class="section section_space-b_2 section_underline_grey">
+          <div class="text text_line_m text_weight_bold text_size_s">arcadia</div>
+        </div>
+        <div class="section">
+          <div class="text text_size_m text_line_l">arcadia</div>
+          <div class="text text_size_m text_line_l text_color_grey text_indent-l_5">trunk</div>
+          <div class="trunk-arrow"></div>
+        </div>
+        <div class="section">
+          <div class="text text_size_s text_indent-r_5 text_line_xs">Last commit</div>
+          <div class="text text_size_s text_line_xs text_indent-r_5 text_color_blue">s324e8</div>
+          <div class="text text_size_s text_line_xs text_indent-r_5">on</div>
+          <div class="text text_size_s text_line_xs text_indent-r_5 text_color_blue">20 Oct 2017, 12:24</div>
+          <div class="text text_size_s text_line_xs text_indent-r_5">by</div>
+          <div class="text text_size_s text_line_xs nickname">robot-srch-releaser</div>
+        </div>
+        <div class="section section_underline_grey section_indent-t_10">
+          <div class="text text_size_s text_line_m text_weight_bold section__selected-item">DETAILS</div>
+          <div class="text text_size_s text_line_m text_weight_bold text_indent-l_30 text_color_grey">HISTORY</div>
+        </div>
+      </div>
+      <div class="layout__container code">
+        <div class="code-viewer">
+          <div class="code-viewer__header">
+            <div class="code-viewer__name">
+              <div class="code-icon"></div>
+              <div>ya.make</div>
+              <div class="code-viewer__file-size">(4347 bytes)</div>
+            </div>
+            <div class="code-viewer__download-btn">
+              <div class="download-icon"></div>
+            </div>
+          </div>
+          <div class="code-view section">
+            <div class="code-view__table">
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">1</div>
+                <div class="code-view__cell">#!/usr/bin/env python</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">2</div>
+                <div class="code-view__cell">import os</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">3</div>
+                <div class="code-view__cell">import sys</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">4</div>
+                <div class="code-view__cell">import platform</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">5</div>
+                <div class="code-view__cell">import json</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">6</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">7</div>
+                <div class="code-view__cell">URLS = ['https://proxy.sandbox.yandex-team.ru/453818264', 'http://storage-int.mds.yandex.net/get-sandbox/110738/by_platform.json.453815347']</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">8</div>
+                <div class="code-view__cell">MD5 = '7f5a85f9c28d35c3a76d8cea7af51106'</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">9</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">10</div>
+                <div class="code-view__cell">RETRIES = 5</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">11</div>
+                <div class="code-view__cell">HASH_PREFIX = 10</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">12</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">13</div>
+                <div class="code-view__cell">HOME_DIR = os.path.expanduser('~')</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">14</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">15</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">16</div>
+                <div class="code-view__cell">def create_dirs(path):</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">17</div>
+                <div class="code-view__cell"> try:</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">18</div>
+                <div class="code-view__cell"> os.makedirs(path)</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">19</div>
+                <div class="code-view__cell"> except OSError as e:</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">20</div>
+                <div class="code-view__cell"> import errno</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">21</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">22</div>
+                <div class="code-view__cell"> if e.errno != errno.EEXIST:</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">23</div>
+                <div class="code-view__cell">raise</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">24</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">25</div>
+                <div class="code-view__cell"> return path</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">26</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">27</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">28</div>
+                <div class="code-view__cell">def misc_root():</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">29</div>
+                <div class="code-view__cell"> return create_dirs(os.getenv('YA_CACHE_DIR') or os.path.join(HOME_DIR, '.ya'))</div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">30</div>
+                <div class="code-view__cell"></div>
+              </div>
+              <div class="code-view__row">
+                <div class="code-view__cell code-view__count">31</div>
+                <div class="code-view__cell"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layout__container layout__container_size_full">
+        <div class="footer">
+          <div class="text text_size_xs text_line_l text_color_footer">Trade secrets of Yandex LLC. 16, Lev Tolstoy Str., Moscow, Russia, 119021.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

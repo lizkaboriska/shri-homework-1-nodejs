@@ -1,0 +1,52 @@
+.files-table {
+  width: 100%;
+  font-size: 15px;
+  border-collapse: collapse;
+
+
+  &__name {
+    width: 18%;
+  }
+  &__last-commit {
+    width: 19%;
+    color: var(--txt-blue);
+  }
+  &__commit-msg {
+    width: 35%;
+  }
+  &__committer {
+    width: 23%;
+  }
+
+  &__header {
+    color: var(--txt-table-grey);
+  }
+  tr {
+    height: 45px;
+    min-height: 45px;
+    border-bottom: 1px solid var(--brdr-default);
+  }
+  .folder {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    margin: auto;
+    position: relative;
+    background-color: #708090;
+    border-radius: 0 3px 3px 3px;
+    /*box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);*/
+    margin-bottom: -8px;
+    margin-top: 12px;
+  }
+
+  .folder:before {
+    content: '';
+    width: 50%;
+    height: 0.2em;
+    border-radius: 0 20px 0 0;
+    background-color: #708090;
+    position: absolute;
+    top: -0.2em;
+    left: 0px;
+  }
+}
