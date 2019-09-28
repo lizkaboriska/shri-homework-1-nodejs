@@ -124,6 +124,12 @@ let bemjson = {
             {
                 block: "section",
                 content: [{
+                    block: "search"
+                }]
+            },
+            {
+                block: "section",
+                content: [{
                     // TODO: templater for table tag
                     block: 'list',
                     content: [{
@@ -170,17 +176,17 @@ let bemjson = {
                         {
                             elem: 'item',
                             mix: {elem: 'brunch'},
-                            content: 'Brunch:'
+                            content: 'ARCADIA-771:'
                         },
                         {
                             elem: 'item',
                             mix: {elem: 'hash'},
-                            content: '3gbjh3'
+                            content: 'd53dsv'
                         },
                         {
                             elem: 'item',
                             mix: {elem: 'message'},
-                            content: 'Commit message yay'
+                            content: '[vcs] move http to arc'
                         },
                         {
                             elem: 'break',
@@ -189,17 +195,17 @@ let bemjson = {
                         {
                             elem: 'item',
                             mix: {elem: 'hash-mob'},
-                            content: '3gbjh3'
+                            content: 'd53dsv'
                         },
                         {
                             elem: 'item',
                             mix: {elem: 'author-mob'},
-                            content: ', by author,'
+                            content: ',  Alexey Besedin, '
                         },
                         {
                             elem: 'item',
                             mix: [{elem: 'author'}, {block: "nickname"}],
-                            content: 'author'
+                            content: 'Alexey Besedin'
                         },
                         {
                             elem: 'item',
@@ -216,22 +222,22 @@ let bemjson = {
                         content: [{
                             elem: 'item',
                             mix: {elem: 'name'},
-                            content: [{block:'folder-icon'},{content: 'api'}]
+                            content: [{block:'folder-icon'},{content: 'ci'}]
                             },
                             {
                                 elem: 'item',
                                 mix: {elem: 'brunch'},
-                                content: 'Brunch:'
+                                content: 'ARCADIA-771::'
                             },
                             {
                                 elem: 'item',
                                 mix: {elem: 'hash'},
-                                content: '3gbjh3'
+                                content: 'c53dsv'
                             },
                             {
                                 elem: 'item',
                                 mix: {elem: 'message'},
-                                content: 'Commit message yay'
+                                content: '[vcs] test for empty commit message'
                             },
                             {
                                 elem: 'break',
@@ -240,27 +246,427 @@ let bemjson = {
                             {
                                 elem: 'item',
                                 mix: {elem: 'hash-mob'},
-                                content: '5dsfh6'
+                                content: 'c53dsv'
                             },
                             {
                                 elem: 'item',
                                 mix: {elem: 'author-mob'},
-                                content: ', by author,'
+                                content: ', by nikitxskv,'
                             },
                             {
                                 elem: 'item',
                                 mix: [{elem: 'author'}, {block: 'nickname'}],
-                                content: 'author'
+                                content: 'nikitxskv'
                             },
                             {
                                 elem: 'item',
                                 mix: {elem: 'time'},
-                                content: '4s ago'
+                                content: '1 min ago'
                             }]
                     },
                     {
                         block: 'list-arrow'
-                    }]
+                    },
+                        {
+                            elem: 'container',
+                            content: [{
+                                elem: 'item',
+                                mix: {elem: 'name'},
+                                content: [{block:'folder-icon'},{content: 'contrib'}]
+                            },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'brunch'},
+                                    content: 'ARCADIA-771::'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'message'},
+                                    content: '[vcs] test for empty commit message'
+                                },
+                                {
+                                    elem: 'break',
+                                    tag: 'br'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash-mob'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'author-mob'},
+                                    content: ', by nikitxskv,'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: [{elem: 'author'}, {block: 'nickname'}],
+                                    content: 'nikitxskv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'time'},
+                                    content: '1 min ago'
+                                }]
+                        },
+                        {
+                            block: 'list-arrow'
+                        },
+                        {
+                            elem: 'container',
+                            content: [{
+                                elem: 'item',
+                                mix: {elem: 'name'},
+                                content: [{block:'folder-icon'},{content: 'http'}]
+                            },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'brunch'},
+                                    content: 'ARCADIA-771::'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'message'},
+                                    content: '[vcs] test for empty commit message'
+                                },
+                                {
+                                    elem: 'break',
+                                    tag: 'br'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash-mob'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'author-mob'},
+                                    content: ', by nikitxskv,'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: [{elem: 'author'}, {block: 'nickname'}],
+                                    content: 'nikitxskv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'time'},
+                                    content: '1 min ago'
+                                }]
+                        },
+                        {
+                            block: 'list-arrow'
+                        },
+                        {
+                            elem: 'container',
+                            content: [{
+                                elem: 'item',
+                                mix: {elem: 'name'},
+                                content: [{block:'folder-icon'},{content: 'lib'}]
+                            },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'brunch'},
+                                    content: 'ARCADIA-771::'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'message'},
+                                    content: '[vcs] test for empty commit message'
+                                },
+                                {
+                                    elem: 'break',
+                                    tag: 'br'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash-mob'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'author-mob'},
+                                    content: ', by nikitxskv,'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: [{elem: 'author'}, {block: 'nickname'}],
+                                    content: 'nikitxskv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'time'},
+                                    content: '1 min ago'
+                                }]
+                        },
+                        {
+                            block: 'list-arrow'
+                        },
+                        {
+                            elem: 'container',
+                            content: [{
+                                elem: 'item',
+                                mix: {elem: 'name'},
+                                content: [{block:'folder-icon'},{content: 'local'}]
+                            },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'brunch'},
+                                    content: 'ARCADIA-771::'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'message'},
+                                    content: '[vcs] test for empty commit message'
+                                },
+                                {
+                                    elem: 'break',
+                                    tag: 'br'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash-mob'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'author-mob'},
+                                    content: ', by nikitxskv,'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: [{elem: 'author'}, {block: 'nickname'}],
+                                    content: 'nikitxskv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'time'},
+                                    content: '1 min ago'
+                                }]
+                        },
+                        {
+                            block: 'list-arrow'
+                        },
+                        {
+                            elem: 'container',
+                            content: [{
+                                elem: 'item',
+                                mix: {elem: 'name'},
+                                content: [{block:'folder-icon'},{content: 'packages'}]
+                            },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'brunch'},
+                                    content: 'ARCADIA-771::'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'message'},
+                                    content: '[vcs] test for empty commit message'
+                                },
+                                {
+                                    elem: 'break',
+                                    tag: 'br'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash-mob'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'author-mob'},
+                                    content: ', by nikitxskv,'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: [{elem: 'author'}, {block: 'nickname'}],
+                                    content: 'nikitxskv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'time'},
+                                    content: '1 min ago'
+                                }]
+                        },
+                        {
+                            block: 'list-arrow'
+                        },
+                        {
+                            elem: 'container',
+                            content: [{
+                                elem: 'item',
+                                mix: {elem: 'name'},
+                                content: [{block:'folder-icon'},{content: 'robots'}]
+                            },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'brunch'},
+                                    content: 'ARCADIA-771::'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'message'},
+                                    content: '[vcs] test for empty commit message'
+                                },
+                                {
+                                    elem: 'break',
+                                    tag: 'br'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash-mob'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'author-mob'},
+                                    content: ', by nikitxskv,'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: [{elem: 'author'}, {block: 'nickname'}],
+                                    content: 'nikitxskv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'time'},
+                                    content: '1 min ago'
+                                }]
+                        },
+                        {
+                            block: 'list-arrow'
+                        },
+                        {
+                            elem: 'container',
+                            content: [{
+                                elem: 'item',
+                                mix: {elem: 'name'},
+                                content: [{block:'folder-icon'},{content: 'server'}]
+                            },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'brunch'},
+                                    content: 'ARCADIA-771::'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'message'},
+                                    content: '[vcs] test for empty commit message'
+                                },
+                                {
+                                    elem: 'break',
+                                    tag: 'br'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash-mob'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'author-mob'},
+                                    content: ', by nikitxskv,'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: [{elem: 'author'}, {block: 'nickname'}],
+                                    content: 'nikitxskv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'time'},
+                                    content: '1 min ago'
+                                }]
+                        },
+                        {
+                            block: 'list-arrow'
+                        },
+                        {
+                            elem: 'container',
+                            content: [{
+                                elem: 'item',
+                                mix: {elem: 'name'},
+                                content: [{block:'folder-icon'},{content: 'ut'}]
+                            },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'brunch'},
+                                    content: 'ARCADIA-771::'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'message'},
+                                    content: '[vcs] test for empty commit message'
+                                },
+                                {
+                                    elem: 'break',
+                                    tag: 'br'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'hash-mob'},
+                                    content: 'c53dsv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'author-mob'},
+                                    content: ', by nikitxskv,'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: [{elem: 'author'}, {block: 'nickname'}],
+                                    content: 'nikitxskv'
+                                },
+                                {
+                                    elem: 'item',
+                                    mix: {elem: 'time'},
+                                    content: '1 min ago'
+                                }]
+                        },
+                        {
+                            block: 'list-arrow'
+                        }]
                 }]
             }]
         },
