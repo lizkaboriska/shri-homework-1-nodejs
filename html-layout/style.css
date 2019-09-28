@@ -27,7 +27,7 @@
   margin-right: 16px;
   margin-left: 16px;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .layout__container_indent-h_s {
     margin-right: 32px;
     margin-left: 32px;
@@ -47,7 +47,7 @@
 .header__logo {
   margin-left: 16px;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .header__logo {
     margin-left: 31px;
   }
@@ -80,7 +80,7 @@
   font-size: var(--font-size-s);
   display: inline-block;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .text {
     --font-size-xs: 13px;
     --font-size-s: 16px;
@@ -184,7 +184,7 @@
 .back-btn__back {
   vertical-align: text-top;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .back-btn {
     display: none;
   }
@@ -207,7 +207,7 @@
   display: inline-block;
   vertical-align: -webkit-baseline-middle;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .show-btn {
     margin-top: 16px;
     margin-right: 32px;
@@ -283,7 +283,7 @@
 .list__container:last-child {
   border-bottom: 0px;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 621px) {
   .list__container {
     display: block;
     width: 100%;
@@ -297,7 +297,7 @@
   line-height: 30px;
   display: inline-block;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 621px) {
   .list__item {
     line-height: 45px;
     white-space: nowrap;
@@ -307,7 +307,7 @@
   margin-right: 5px;
   display: inline-block;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 621px) {
   .list__by, .list__comma {
     display: none;
   }
@@ -321,7 +321,7 @@
 .list__author {
   display: none;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 621px) {
   .list__author {
     display: inline-block;
   }
@@ -332,7 +332,7 @@
 .list__hash, .list__brunch, .list__hash-mob, .list__full-hash {
   color: var(--txt-blue);
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 621px) {
   .list__brunch {
     display: none;
   }
@@ -380,7 +380,7 @@
 .list__container_header {
   display: none;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 621px) {
   .list__container_header {
     color: var(--txt-table-grey);
     display: table;
@@ -435,7 +435,7 @@
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='19' viewBox='0 0 10 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.9375 1.02344L0.15625 1.76562C0 1.96094 0 2.27344 0.15625 2.42969L7.22656 9.5L0.15625 16.6094C0 16.7656 0 17.0781 0.15625 17.2734L0.9375 18.0156C1.13281 18.2109 1.40625 18.2109 1.60156 18.0156L9.80469 9.85156C9.96094 9.65625 9.96094 9.38281 9.80469 9.1875L1.60156 1.02344C1.40625 0.828125 1.13281 0.828125 0.9375 1.02344Z' fill='%23E5E5E5'/%3E%3C/svg%3E%0A");
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .list-arrow {
     display: none;
   }
@@ -457,7 +457,7 @@
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3Csvg width='2' height='68' viewBox='0 0 2 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='2' height='68' rx='1' fill='%23B8BEC3'/%3E%3C/svg%3E%0A");
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .palka-vniz {
     height: 34px;
     background-image: url("data:image/svg+xml,%3Csvg width='2' height='32' viewBox='0 0 2 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='2' height='32' rx='1' fill='%23B8BEC3'/%3E%3C/svg%3E%0A");
@@ -475,7 +475,7 @@
   height: 13px;
   width: 15px;
   background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='13' viewBox='0 0 10 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.23679 3.875C9.23679 2.84375 8.39304 2 7.36179 2C6.3071 2 5.48679 2.84375 5.48679 3.875C5.48679 4.74219 6.04929 5.46875 6.82273 5.67969C6.79929 6.05469 6.72898 6.35938 6.56492 6.54688C6.21335 6.99219 5.41648 7.08594 4.57273 7.15625C3.91648 7.20312 3.21335 7.27344 2.67429 7.55469V4.17969C3.42429 3.94531 3.98679 3.21875 3.98679 2.375C3.98679 1.34375 3.14304 0.5 2.11179 0.5C1.0571 0.5 0.236791 1.34375 0.236791 2.375C0.236791 3.21875 0.775853 3.94531 1.54929 4.17969V8.84375C0.775853 9.07812 0.236791 9.80469 0.236791 10.625C0.236791 11.6797 1.0571 12.5 2.11179 12.5C3.14304 12.5 3.98679 11.6797 3.98679 10.625C3.98679 9.82812 3.47117 9.14844 2.76804 8.89062C2.83835 8.77344 2.95554 8.65625 3.1196 8.5625C3.4946 8.375 4.08054 8.32812 4.66648 8.28125C5.67429 8.1875 6.77585 8.07031 7.45554 7.25C7.78367 6.85156 7.94773 6.3125 7.94773 5.65625C8.69773 5.42188 9.23679 4.71875 9.23679 3.875ZM2.11179 2C2.29929 2 2.48679 2.1875 2.48679 2.375C2.48679 2.58594 2.29929 2.75 2.11179 2.75C1.90085 2.75 1.73679 2.58594 1.73679 2.375C1.73679 2.1875 1.90085 2 2.11179 2ZM2.11179 11C1.90085 11 1.73679 10.8359 1.73679 10.625C1.73679 10.4375 1.90085 10.25 2.11179 10.25C2.29929 10.25 2.48679 10.4375 2.48679 10.625C2.48679 10.8359 2.29929 11 2.11179 11ZM7.36179 3.5C7.54929 3.5 7.73679 3.6875 7.73679 3.875C7.73679 4.08594 7.54929 4.25 7.36179 4.25C7.15085 4.25 6.98679 4.08594 6.98679 3.875C6.98679 3.6875 7.15085 3.5 7.36179 3.5Z' fill='black'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='13' viewBox='0 0 10 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.23679 3.875C9.23679 2.84375 8.39304 2 7.62179 2C6.3071 2 5.48679 2.84375 5.48679 3.875C5.48679 4.74219 6.04929 5.46875 6.82273 5.67969C6.79929 6.05469 6.72898 6.35938 6.56492 6.54688C6.21335 6.99219 5.41648 7.08594 4.57273 7.15625C3.91648 7.20312 3.21335 7.27344 2.67429 7.55469V4.17969C3.42429 3.94531 3.98679 3.21875 3.98679 2.375C3.98679 1.34375 3.14304 0.5 2.11179 0.5C1.0571 0.5 0.236791 1.34375 0.236791 2.375C0.236791 3.21875 0.775853 3.94531 1.54929 4.17969V8.84375C0.775853 9.07812 0.236791 9.80469 0.236791 10.625C0.236791 11.6797 1.0571 12.5 2.11179 12.5C3.14304 12.5 3.98679 11.6797 3.98679 10.625C3.98679 9.82812 3.47117 9.14844 2.76804 8.89062C2.83835 8.77344 2.95554 8.65625 3.1196 8.5625C3.4946 8.375 4.08054 8.32812 4.66648 8.28125C5.67429 8.1875 6.77585 8.07031 7.45554 7.25C7.78367 6.85156 7.94773 6.3125 7.94773 5.65625C8.69773 5.42188 9.23679 4.71875 9.23679 3.875ZM2.11179 2C2.29929 2 2.48679 2.1875 2.48679 2.375C2.48679 2.58594 2.29929 2.75 2.11179 2.75C1.90085 2.75 1.73679 2.58594 1.73679 2.375C1.73679 2.1875 1.90085 2 2.11179 2ZM2.11179 11C1.90085 11 1.73679 10.8359 1.73679 10.625C1.73679 10.4375 1.90085 10.25 2.11179 10.25C2.29929 10.25 2.48679 10.4375 2.48679 10.625C2.48679 10.8359 2.29929 11 2.11179 11ZM7.62179 3.5C7.54929 3.5 7.73679 3.6875 7.73679 3.875C7.73679 4.08594 7.54929 4.25 7.62179 4.25C7.15085 4.25 6.98679 4.08594 6.98679 3.875C6.98679 3.6875 7.15085 3.5 7.62179 3.5Z' fill='black'/%3E%3C/svg%3E%0A");
 }
 
 .download-icon {
@@ -503,7 +503,7 @@
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.9375 0.625H1.3125C0.574219 0.625 0 1.22656 0 1.9375V11.5625C0 12.3008 0.574219 12.875 1.3125 12.875H10.9375C11.6484 12.875 12.25 12.3008 12.25 11.5625V1.9375C12.25 1.22656 11.6484 0.625 10.9375 0.625ZM10.7734 11.5625H1.47656C1.36719 11.5625 1.3125 11.5078 1.3125 11.3984V2.10156C1.3125 2.01953 1.36719 1.9375 1.47656 1.9375H10.7734C10.8555 1.9375 10.9375 2.01953 10.9375 2.10156V11.3984C10.9375 11.5078 10.8555 11.5625 10.7734 11.5625ZM9.29688 3.25H5.57812C5.27734 3.25 5.11328 3.60547 5.33203 3.82422L6.64453 5.13672L2.70703 9.07422C2.57031 9.21094 2.57031 9.42969 2.70703 9.53906L3.33594 10.168C3.44531 10.3047 3.66406 10.3047 3.80078 10.168L7.73828 6.23047L9.05078 7.54297C9.26953 7.73438 9.625 7.59766 9.625 7.29688V3.57812C9.625 3.41406 9.46094 3.25 9.29688 3.25Z' fill='%237F8285'/%3E%3C/svg%3E%0A");
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .quadrarrow {
     margin-top: 4px;
   }
@@ -538,7 +538,7 @@
   margin-bottom: 10px;
   height: 102px;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .history__info {
     height: 68px;
   }
@@ -547,7 +547,7 @@
   display: inline-block;
   width: calc(96% - 40px);
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .history__text {
     width: calc(78% - 40px);
   }
@@ -574,7 +574,7 @@
   display: block;
   height: 112px;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .history__hash-sep, .history__icon {
     height: 78px;
   }
@@ -588,7 +588,7 @@
   display: inline-block;
   vertical-align: top;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .history__hash-column, .history__icons {
     display: inline-block;
     vertical-align: top;
@@ -629,7 +629,7 @@
   border: 1px solid var(--brdr-lighter);
   border-radius: 3px;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .code-viewer__download-btn {
     display: inline-block;
   }
@@ -662,7 +662,7 @@
   margin-right: 5px;
 }
 
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .code {
     margin-right: 32px;
     margin-left: 32px;
@@ -684,7 +684,7 @@
   display: inline-block;
   margin-left: 10px;
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .diff-path__second-str, .diff-path__first-str {
     display: inline-block;
     margin-top: 0px;
@@ -707,7 +707,7 @@
 .diff {
   border: 1px solid var(--brdr-default);
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .diff {
     margin-right: 32px;
     margin-left: 32px;
@@ -731,7 +731,7 @@
   white-space: nowrap;
   height: 20px;
 }
-@media only screeen and (min-width: 361px) {
+@media only screeen and (min-width: 621px) {
   .code-view__cell {
     padding-left: 8px;
   }
@@ -747,7 +747,7 @@
   background-color: var(--bg-light-red);
 }
 
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 621px) {
   .code-viewer .code-view__cell {
     padding-left: 30px;
   }

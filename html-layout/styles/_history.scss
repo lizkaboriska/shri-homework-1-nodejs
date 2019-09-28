@@ -7,7 +7,7 @@
   &__info {
     margin-bottom: 10px;
     height: 102px;
-    @media only screen and (min-width: 361px){
+    @media only screen and (min-width: 621px){
       height: 68px;
     }
   }
@@ -15,7 +15,7 @@
     display: inline-block;
     width: calc(96% - 40px);
 
-    @media only screen and (min-width: 361px) {
+    @media only screen and (min-width: 621px) {
       width: calc(78% - 40px);
     }
 
@@ -48,7 +48,7 @@
   &__hash-sep, &__icon {
     display: block;
     height: 112px;
-    @media only screen and (min-width: 361px) {
+    @media only screen and (min-width: 621px) {
       height: 78px;
     }
   }
@@ -65,7 +65,7 @@
   }
 
 
-  @media only screen and (min-width:361px) {
+  @media only screen and (min-width:621px) {
     &__hash-column, &__icons {
       display: inline-block;
       vertical-align: top;

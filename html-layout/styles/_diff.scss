@@ -13,7 +13,7 @@
       display: inline-block;
       margin-left: 10px;
     }
-    @media only screen and (min-width: 361px){
+    @media only screen and (min-width: 621px){
       display: inline-block;
       margin-top: 0px;
     }
@@ -67,7 +67,7 @@
 .diff {
   border: 1px solid var(--brdr-default);
 
-  @media only screen and (min-width: 361px) {
+  @media only screen and (min-width: 621px) {
     margin-right: 32px;
     margin-left: 32px;
   }
