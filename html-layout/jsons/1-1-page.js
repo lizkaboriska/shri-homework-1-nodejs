@@ -107,6 +107,18 @@ let bemjson = {
             },
             {
                 block: "section",
+                mods: {"indent-t": "10"},
+                content: [{
+                    block: "search",
+                    content: [{
+                        tag: "input",
+                        elem: "input",
+                        attrs: {placeholder: "Начните вводить имя для поиска", id: "files-search"}
+                    }]
+                }]
+            },
+            {
+                block: "section",
                 mods: {underline: "grey", "indent-t": "10"},
                 content: [{
                     block: "text",
@@ -124,14 +136,9 @@ let bemjson = {
             {
                 block: "section",
                 content: [{
-                    block: "search"
-                }]
-            },
-            {
-                block: "section",
-                content: [{
                     // TODO: templater for table tag
                     block: 'list',
+                    attrs: {id: "files-list"},
                     content: [{
                         elem: 'container',
                         elemMods: {header: true},
