@@ -1,0 +1,84 @@
+.code-viewer {
+  width: 100%;
+  border: 1px solid var(--brdr-lighter);
+
+  margin-top: 20px;
+
+  &__header {
+    //width: 100%;
+    height: 40px;
+    border-bottom: 1px solid var(--brdr-lighter);
+    background-color: var(--bg-grey);
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &__name {
+    display: inline-block;
+    div {
+      display: inline-block;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+  }
+  &__file-size {
+    color: var(--brdr-darker);
+    font-style: italic;
+  }
+  &__download-btn {
+    width: 38px;
+    height: 28px;
+
+
+    float: right;
+    margin-top: 5px;
+    //margin-right: 6px;
+    display: none;
+    border: 1px solid var(--brdr-lighter);
+    border-radius: 3px;
+
+    @media only screen and (min-width: 621px) {
+      display: inline-block;
+    }
+  }
+
+  &__code {
+    font-family: monospace;
+    //font-size: 14px;
+  }
+
+  &__numbers {
+    display: inline-block;
+    div {
+      margin-top: 6px;
+      float: right;
+      clear: both;
+      color: var(--txt-grey);
+    }
+  }
+  &__strings {
+    width: calc(100% - 67px);
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 50px;
+    overflow: scroll;
+    div {
+      //display: inline-block;
+      margin-top: 6px;
+      white-space: nowrap;
+    }
+  }
+  &__string {
+    div {
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}
+
+.code {
+  @media only screen and (min-width: 621px) {
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+}

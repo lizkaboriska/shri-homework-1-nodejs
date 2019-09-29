@@ -1,0 +1,112 @@
+.text {
+  --font-size-xs: 9px;
+  --font-size-s: 13px;
+  --font-size-sm: 15px;
+  --font-size-m: 20px;
+  --font-size-l: 30px;
+
+  --line-height-xs: 12px;
+  --line-height-s: 15px;
+  --line-height-sm: 28px;
+  --line-height-m: 40px;
+  --line-height-l: 40px;
+
+  @media only screen and (min-width: 621px) {
+    --font-size-xs: 13px;
+    --font-size-s: 16px;
+    --font-size-sm: 20px;
+    --font-size-m: 24px;
+    --font-size-l: 30px;
+
+    --line-height-xs: 15px;
+    --line-height-s: 20px;
+    --line-height-sm: 28px;
+    --line-height-m: 40px;
+    --line-height-l: 50px;
+  }
+
+
+  font-size: var(--font-size-s);
+  display: inline-block;
+  &_size {
+    &_xs {
+      font-size: var(--font-size-xs);
+    }
+    &_s {
+      font-size: var(--font-size-s);
+    }
+    &_sm {
+      font-size: var(--font-size-sm);
+    }
+    &_m {
+      font-size: var(--font-size-m);
+    }
+    &_l {
+      font-size: var(--font-size-l);
+    }
+  }
+  &_line {
+
+    // TODO: поменять названия размеров
+    &_xs {
+      line-height: var(--line-height-xs);
+    }
+    &_s {
+      line-height: var(--line-height-s);
+    }
+    &_sm {
+      line-height: var(--line-height-sm);
+    }
+    &_m {
+      line-height: var(--line-height-m);
+    }
+    &_l {
+      line-height: var(--line-height-l);
+    }
+  }
+  &_weight {
+    &_bold {
+      font-weight: bold;
+    }
+  }
+  &_color {
+    &_purple {
+      color: var(--txt-purple);
+    }
+    &_grey {
+      color: var(--txt-grey);
+    }
+    &_blue {
+      color: var(--txt-blue);
+    }
+    &_footer {
+      color: var(--txt-footer);
+    }
+  }
+  &_indent {
+    &-l {
+      &_5 {
+        margin-left: 5px;
+      }
+      &_30 {
+        margin-left: 30px;
+      }
+    }
+    &-r {
+      &_5 {
+        margin-right: 5px;
+      }
+    }
+  }
+  //&_space {
+  //  &-v {
+  //    &_30 {
+  //      padding-top: 30px;
+  //      padding-bottom: 30px;
+  //    }
+  //    &-b_30 {
+  //      padding-bottom: 20px;
+  //    }
+  //  }
+  //}
+}

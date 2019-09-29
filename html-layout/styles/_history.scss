@@ -1,0 +1,76 @@
+.history {
+  &__visual {
+    display: inline-block;
+    vertical-align:top;
+    width: calc(1% + 40px);
+  }
+  &__info {
+    margin-bottom: 10px;
+    height: 102px;
+    @media only screen and (min-width: 621px){
+      height: 68px;
+    }
+  }
+  &__text {
+    display: inline-block;
+    width: calc(96% - 40px);
+
+    @media only screen and (min-width: 621px) {
+      width: calc(78% - 40px);
+    }
+
+    //margin-left: 25px;
+  }
+
+  &__commit-message {
+    display: block;
+    margin-bottom: 3px;
+  }
+  &__comment {
+    display: block;
+    margin-bottom: 2px;
+  }
+  &__lower-str {
+    display: block;
+  }
+  &__hash {
+    margin-right: 20px;
+  }
+  &__author {
+    div {
+      display: inline-block;
+      margin-right: 3px;
+    }
+  }
+
+
+
+  &__hash-sep, &__icon {
+    display: block;
+    height: 112px;
+    @media only screen and (min-width: 621px) {
+      height: 78px;
+    }
+  }
+
+  &__hash-column {
+    width: calc(23% - 40px);
+    display: none;
+  }
+
+  &__icons {
+    width: calc(3% - 40px);
+    display: inline-block;
+    vertical-align: top;
+  }
+
+
+  @media only screen and (min-width:621px) {
+    &__hash-column, &__icons {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+
+}

@@ -1,0 +1,42 @@
+
+
+.code-view {
+
+  overflow: scroll;
+
+  &__table {
+    display: table;
+    width: 100%;
+    font-family: monospace;
+
+  }
+  &__row {
+    display: table-row;
+  }
+  &__cell {
+    display: table-cell;
+    padding-left: 8px;
+    white-space: nowrap;
+    height: 20px;
+
+    @media only screeen and (min-width: 621px) {
+      padding-left: 8px;
+    }
+  }
+  &__count {
+    color: var(--brdr-darker);
+    text-align: right;
+  }
+  &__green {
+    background-color: var(--bg-light-green);
+  }
+  &__red {
+    background-color: var(--bg-light-red);
+  }
+}
+
+.code-viewer .code-view__cell {
+  @media only screen and (min-width: 621px) {
+    padding-left: 30px;
+  }
+}
