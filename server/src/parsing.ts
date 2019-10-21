@@ -1,4 +1,6 @@
-function parseCommitsFromGitLog(output) {
+import { Commit, Branch, FileDetails } from './interfaces';
+
+export function parseCommitsFromGitLog(output: string): Commit[] {
     let commits = [];
 
     for (let line of output.split('\n')) {
@@ -15,7 +17,7 @@ function parseCommitsFromGitLog(output) {
     return commits;
 }
 
-function parseFilesFromGitLsTree(output) {
+export function parseFilesFromGitLsTree(output: string): FileDetails[] {
     let lines = output.split('\n');
     let filtered = lines.filter((value) => value !== '');
 
@@ -32,7 +34,7 @@ function parseFilesFromGitLsTree(output) {
     return files;
 }
 
-function parseBranchesFromGitForEachRef(output) {
+export function parseBranchesFromGitForEachRef(output: string): Branch[] {
     let lines = output.split('\n');
     let filtered = lines.filter((value) => value !== '');
 
@@ -49,18 +51,10 @@ function parseBranchesFromGitForEachRef(output) {
     return branches;
 }
 
-function parseFileLinesFromGitShow (lines) {
-    return lines = lines.split('\n').filter((line) => line !== '');
+export function parseFileLinesFromGitShow (lines: string): string[] {
+    return lines.split('\n').filter((line) => line !== '');
 }
 
-function parseLastShaFromGitRevList (last_sha) {
-    return last_sha = last_sha.split('\n').filter((line) => line !== '')[0];
+export function parseLastShaFromGitRevList (last_sha: string): string {
+    return last_sha.split('\n').filter((line) => line !== '')[0];
 }
-
-module.exports = {
-    parseCommitsFromGitLog,
-    parseFilesFromGitLsTree,
-    parseBranchesFromGitForEachRef,
-    parseFileLinesFromGitShow,
-    parseLastShaFromGitRevList
-};
