@@ -1,9 +1,9 @@
-'use strict';
-const expect = require("chai").expect;
+export = {}
 
-const repositoryFullPathByRepositoryId = require('./utils').repositoryFullPathByRepositoryId;
-const validRepositoryId = require('./utils').validRepositoryId;
-const parsing = require("./parsing");
+import { expect } from 'chai';
+import * as parsing from './parsing';
+import {repositoryFullPathByRepositoryId, validRepositoryId} from './utils';
+import {Commit, FileDetails, Branch} from './interfaces';
 
 describe('repository name checker', () => {
   it('validRepositoryId пропускает валидные пути', () => {
@@ -31,7 +31,7 @@ describe('repository full path construction', () => {
     })
 });
 
-function expectGitLogParsingIsCorrect(text, commits_expected) {
+function expectGitLogParsingIsCorrect(text: string, commits_expected: Commit[]) {
     const commits_got = parsing.parseCommitsFromGitLog(text);
     expect(commits_got).to.deep.equal(commits_expected);
 }
@@ -66,7 +66,7 @@ describe('git log parsing', () => {
     })
 });
 
-function expectGitLsTreeParsingIsCorrect(text, expected) {
+function expectGitLsTreeParsingIsCorrect(text: string, expected: FileDetails[]) {
     const actual = parsing.parseFilesFromGitLsTree(text);
     expect(actual).to.deep.equal(expected);
 }
@@ -98,7 +98,7 @@ describe('git ls-tree parsing', () => {
     })
 });
 
-function expectGitForEachRefParsingIsCorrect(text, expected) {
+function expectGitForEachRefParsingIsCorrect(text: string, expected: Branch[]) {
     const actual = parsing.parseBranchesFromGitForEachRef(text);
     expect(actual).to.deep.equal(expected);
 }
@@ -131,7 +131,7 @@ describe('git for-each-ref parsing', () => {
 });
 
 
-function expectGitForShowParsingIsCorrect(text, expected) {
+function expectGitForShowParsingIsCorrect(text: string, expected: string[]) {
     const actual = parsing.parseFileLinesFromGitShow(text);
     expect(actual).to.deep.equal(expected);
 }
@@ -203,7 +203,7 @@ describe('git show parsing', () => {
     })
 });
 
-function expectLastShaFromGitRevListParsingIsCorrect(text, expected) {
+function expectLastShaFromGitRevListParsingIsCorrect(text: string, expected: string) {
     const actual = parsing.parseLastShaFromGitRevList(text);
     expect(actual).to.deep.equal(expected);
 }

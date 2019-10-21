@@ -1,11 +1,12 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var cors = require('cors');
+export = {}
+import express from 'express';
+import * as path from 'path';
+import logger from 'morgan';
+import cors from 'cors';
+import * as fs from 'fs';
 
-const fs = require('fs');
-const exec = require('child_process').exec;
-const execSync = require('child_process').execSync;
+import {exec, execSync} from 'child_process';
+import {ResponseCustom} from './interfaces'
 
 const REPOSITORIES_DIR = path.normalize(process.argv[2]);
 if (!fs.existsSync(REPOSITORIES_DIR)) {
@@ -13,9 +14,9 @@ if (!fs.existsSync(REPOSITORIES_DIR)) {
     process.exit(1);
 }
 
-const parsing = require("./parsing");
-const utils = require("./utils");
-const repositoryFullPath = utils.repositoryFullPathByRepositoryId(REPOSITORIES_DIR);
+import * as parsing from './parsing';
+import {repositoryFullPathByRepositoryId, validRepositoryId} from './utils';
+const repositoryFullPath = repositoryFullPathByRepositoryId(REPOSITORIES_DIR);
 
 var app = express();
 app.use(cors({origin: true}));
@@ -25,10 +26,10 @@ app.use(express.json({type: 'application/*'})); // чтобы не отправ�
 // part 1
 app.get('/api/repos', (req, res) => {
     if (fs.statSync(REPOSITORIES_DIR).isDirectory()) {
-        let repos = [];
+        let repos: string[] = [];
 
         let files = fs.readdirSync(REPOSITORIES_DIR);
-        files.forEach(function (filename) {
+        files.forEach(function (filename: string) {
             let p = path.join(REPOSITORIES_DIR, filename);
             let git_folder = path.join(p, '.git');
             if (fs.statSync(p).isDirectory() &&
@@ -45,7 +46,7 @@ app.get('/api/repos', (req, res) => {
 
 // part 2
 app.get('/api/repos/:repositoryId/commits/:commitHash', (req, res) => {
-    if (!utils.validRepositoryId(req.params.repositoryId)) {
+    if (!validRepositoryId(req.params.repositoryId)) {
         res.status(400).end();
         return;
     }
@@ -67,7 +68,7 @@ app.get('/api/repos/:repositoryId/commits/:commitHash', (req, res) => {
 
 // part 3
 app.get('/api/repos/:repositoryId/commits/:commitHash/diff', (req, res) => {
-    if (!utils.validRepositoryId(req.params.repositoryId)) {
+    if (!validRepositoryId(req.params.repositoryId)) {
         res.status(400).end();
         return;
     }
@@ -84,29 +85,9 @@ app.get('/api/repos/:repositoryId/commits/:commitHash/diff', (req, res) => {
     });
 });
 
-// part 4
-// app.get('/api/repos/:repositoryId', (req, res) => {
-//     if (!utils.validRepositoryId(req.params.repositoryId)) {
-//         res.status(400).end();
-//         return;
-//     }
-//     let repo_dir = repositoryFullPath(req.params.repositoryId);
-//
-//     let command = `cd ${repo_dir} && git ls-tree -r master --name-only`;
-//     exec(command, (e, stdout, stderr) => {
-//         if (e instanceof Error) {
-//             res.status(404).end();
-//             return;
-//         }
-//         let lines = stdout.split('\n');
-//         let filtered = lines.filter((value) => value !== '');
-//         res.json({'files': filtered});
-//     });
-// });
-
 // список файлов и директорий в репозиторие
 app.get('/api/repos/:repositoryId', (req, res) => {
-    if (!utils.validRepositoryId(req.params.repositoryId)) {
+    if (!validRepositoryId(req.params.repositoryId)) {
         res.status(400).end();
         return;
     }
@@ -130,7 +111,7 @@ app.get('/api/repos/:repositoryId', (req, res) => {
 
 // список бранчей для вкладки
 app.get('/api/repos/:repositoryId/branches', (req, res) => {
-    if (!utils.validRepositoryId(req.params.repositoryId)) {
+    if (!validRepositoryId(req.params.repositoryId)) {
         res.status(400).end();
         return;
     }
@@ -153,7 +134,7 @@ app.get('/api/repos/:repositoryId/blob/:commitHash/:pathToFile(*)', (req, res) =
     // query parameters
     const skip_content = req.query.skip_content;
 
-    if (!utils.validRepositoryId(req.params.repositoryId)) {
+    if (!validRepositoryId(req.params.repositoryId)) {
         res.status(400).end();
         return;
     }
@@ -161,7 +142,7 @@ app.get('/api/repos/:repositoryId/blob/:commitHash/:pathToFile(*)', (req, res) =
     let commit_hash = req.params.commitHash;
     let path_to_file = req.params.pathToFile;
 
-    let response = {};
+    let response : ResponseCustom = { lines: [], last_sha: ""};
     let command;
 
     if (!skip_content) {
@@ -183,7 +164,7 @@ app.get('/api/repos/:repositoryId/blob/:commitHash/:pathToFile(*)', (req, res) =
 
 // part 6
 app.delete('/api/repos/:repositoryId', (req, res) => {
-    if (!utils.validRepositoryId(req.params.repositoryId)) {
+    if (!validRepositoryId(req.params.repositoryId)) {
         res.status(400).end();
         return;
     }
@@ -202,7 +183,7 @@ app.delete('/api/repos/:repositoryId', (req, res) => {
 //part 7
 app.post('/api/repos/:repositoryId', (req, res) => {
     let repo_to_clone_url = req.body.url;
-    if (!utils.validRepositoryId(req.params.repositoryId)) {
+    if (!validRepositoryId(req.params.repositoryId)) {
         res.status(400).end();
         return;
     }
@@ -225,7 +206,7 @@ app.post('/api/repos/:repositoryId', (req, res) => {
 // /api/repos/sixth-dir/master/?number=1
 // /api/repos/:repositoryId/:commitHash/?skip=2&number=3
 app.get('/api/repos/:repositoryId/:commitHash/', (req, res) => {
-    if (!utils.validRepositoryId(req.params.repositoryId)) {
+    if (!validRepositoryId(req.params.repositoryId)) {
         res.status(400).end();
         return;
     }
@@ -241,10 +222,10 @@ app.get('/api/repos/:repositoryId/:commitHash/', (req, res) => {
             return;
         }
 
-        stdout = stdout.split('\n').filter((line) => line !== '');
+        let stdout_lines = stdout.split('\n').filter((line) => line !== '');
         let commits = [];
 
-        for (let line of stdout) {
+        for (let line of stdout_lines) {
             let commit = line.split('\t');
 
             commits.push({
@@ -261,42 +242,4 @@ app.get('/api/repos/:repositoryId/:commitHash/', (req, res) => {
 
 
 // FOR REACT HOMEWORK
-
-
-
-
-// Список веток с хэшами
-//
-// app.get('/api/repos/:repositoryId/b/', (req, res) => {
-//     if (!utils.validRepositoryId(req.params.repositoryId)) {
-//         res.status(400).end();
-//         return;
-//     }
-//     let repo_dir = repositoryFullPath(req.params.repositoryId);
-//
-//     let command = `cd ${repo_dir} && git ls-tree master`;
-//     exec(command, (e, stdout, stderr) => {
-//         if (e instanceof Error) {
-//             res.status(404).end();
-//             return;
-//         }
-//         let lines = stdout.split('\n');
-//         let filtered = lines.filter((value) => value !== '');
-//         let files = [];
-//         for (let line of filtered) {
-//             let file = line.split(' ');
-//             let rest = file[2].split('\t');
-//             files.push({
-//                 type: file[1],
-//                 sha: rest[0],
-//                 name: rest[1]
-//             });
-//         }
-//         res.json(files);
-//     });
-// });
-
-
-
-
 module.exports = app
